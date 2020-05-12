@@ -1,0 +1,19 @@
+{
+  "folders": [
+	{
+		"path": "C:\\Users\\Valer\\workspace\\HTML_cv\\jackson\\jackson"
+	},
+	{
+		"path": "C:\\Users\\Valer\\workspace\\HTML_cv\\portafolio"
+	},
+	{
+		"path": "..\\.."
+	},
+	{
+		"path": "..\\..\\..\\..\\AgileIntPPMTool\\ppmtool-react-client"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "portafolio"
+  }
+}
