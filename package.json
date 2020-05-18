@@ -14,7 +14,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "2.1.8",
     "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "typewriter-effect": "^2.13.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,7 +24,7 @@
     "eject": "react-scripts eject",
     "sass": "node-sass -w public/scss/ -o src/ --recursive"
   },
-  "proxy": "http://localhost:8080",
+  "proxy": "https://dailymanagement.herokuapp.com/",
   "eslintConfig": {
     "extends": "react-app"
   },

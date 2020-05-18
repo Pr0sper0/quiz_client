@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from 'prop-types';
+import Typewriter from 'typewriter-effect';
+import { buddhas } from '../../utils/buddhas';
 
 class Landing extends Component {
 
@@ -12,30 +14,44 @@ class Landing extends Component {
   }
 
   render() {
+
     return (
-      <div className="landing">
-        <div className="light-overlay landing-inner text-dark">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">
-                  Daily Management Tool
+      <div id="landing">
+        <div className="container landing-container">
+          <div className="row">
+            <div className="col-md-12 text-center">
+              <h1 className="display-3 mb-4">
+                Daily Management Tool
                 </h1>
-                <p className="lead">
-                  Create your account to join Assignment or start your own
+              <p className="lead">
+                Create your account to join Assignment or start your own
                 </p>
-                <hr />
-                <Link className="btn btn-lg btn-green mr-2" to="/register">
-                  Sign Up
+              <hr />
+              <Link className="btn btn-lg btn-green mr-2" to="/register">
+                Sign Up
                 </Link>
-                <Link className="btn btn-lg btn-primary mr-2" to="/login">
-                  Login
+              <Link className="btn btn-lg btn-primary mr-2" to="/login">
+                Login
                 </Link>
-              </div>
             </div>
           </div>
-        </div>
-      </div>
+
+          <div id="typewriter">
+
+            <Typewriter
+              options={{
+                strings: buddhas.map((element) =>
+                  buddhas[Math.floor(Math.random() * buddhas.length)]),
+                autoStart: true,
+                loop: true,
+                delay: 100,
+                deleteSpeed: 10,
+
+              }}
+
+            />
+          </div></div>
+      </div >
     );
   }
 }

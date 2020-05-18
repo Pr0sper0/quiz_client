@@ -17,16 +17,13 @@ class Header extends Component {
     const { validToken, user } = this.props.security;
 
     const userIsAuthenticated = (
-      <div className="collapse navbar-collapse" id="mobile-nav">
-        <ul className="navbar-nav mr-auto">
+      <div id="mobile-nav">
+        <ul className="navbar-nav">
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard">
               Dashboard
             </Link>
           </li>
-        </ul>
-
-        <ul className="navbar-nav ml-auto">
           <li className="nav-item">
             <Link className="nav-link" to="/dashboard">
               <i className="fas fa-user-circle mr1" />
@@ -39,13 +36,22 @@ class Header extends Component {
               Logout
             </Link>
           </li>
+
         </ul>
       </div>
     );
 
     const userIsNotAuthenticated = (
-      <div className="collapse navbar-collapse" id="mobile-nav">
-        <ul className="navbar-nav ml-auto">
+      <div id="mobile-nav">
+        <ul className="navbar-nav">
+
+          <li className="nav-item">
+            <Link className="nav-link" to="/">
+              Main
+            </Link>
+          </li>
+
+
           <li className="nav-item">
             <Link className="nav-link" to="/register">
               Sign Up
@@ -69,19 +75,11 @@ class Header extends Component {
     }
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark bg-main mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-header menubar">
         <div className="container">
           <Link className="navbar-brand" to="/">
             Daily Management Tool
           </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#mobile-nav"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
           {headerLinks}
         </div>
       </nav>

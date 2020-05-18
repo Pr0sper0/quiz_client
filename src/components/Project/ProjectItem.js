@@ -21,17 +21,17 @@ class ProjectItem extends Component {
             </div>
           </div>
         </div> */}
-        <div className="card card-body bg-light mb-3">
+        <div className="card card-body bg-light mb-4">
           <div className="row">
 
-            <div className="col-lg-8 col-md-8 col-8">
+            <div className="col-lg-8 col-md-8 col-sm-8">
               <h3>{project.projectName}</h3>
               <p>{project.description}</p>
               <div className="locate-bottom">
                 <p>Start date: {project.start_date}</p>
               </div>
             </div>
-            <div className="col-md-4 d-none d-md-block">
+            <div className="col-md-4 col-sm-4 d-md-block">
               <ul className="list-group">
                 <Link to={`/projectBoard/${project.projectIdentifier}`}>
                   <li className="list-group-item board">

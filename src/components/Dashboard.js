@@ -13,10 +13,10 @@ class Dashboard extends Component {
   render() {
     const { projects } = this.props.project;
     return (
-      <div className="projects">
+      <div className="projects main-container">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12 dashboard-content">
               <h1 className="display-4 text-center">Assignment list</h1>
               <br />
               <CreateAssignmentButton />
