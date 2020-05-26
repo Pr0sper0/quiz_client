@@ -19,10 +19,15 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  static getDerivedStateFromProps(nextProps, state) {
     if (nextProps.security.validToken) {
-      this.props.history.push("/dashboard");
-    }
+      console.log('valid!')
+      return { props: nextProps.history.push("/dashboard") };
+    } else
+      if (nextProps.errors) {
+        return { errors: nextProps.errors };
+      }
+
 
   }
 
